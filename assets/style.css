@@ -1,0 +1,41 @@
+.index {
+    background-image: url(plume.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+}
+.home {
+
+    color: rgb(226, 239, 250);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+}
+p {
+    text-align: center;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-family: 'ThreeFourTwoTwo';
+    color: rgb(204, 208, 211);
+    
+}
+#version {
+    text-align: right;
+    width: 35%;
+}
+/* .content-box{
+    box-sizing: border-box;
+    border: 2px solid white;
+    width: 50%;
+} */
+/* .video {
+} */
+#version.pre{
+    text-align: right;
+}
