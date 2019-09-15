@@ -6,19 +6,66 @@
   <title>PLUME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/fonts2/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+  <script src="https://use.typekit.net/nlq1kdt.js"></script>
+  <script src="./assets/anime-master/lib/anime.min.js"></script>
 </head>
 
-<body class= "index">
+<!-- <div id="container">
+  <video id="background_video" loop muted></video>
+  <div id="video_cover"></div>
+  <div id="overlay"></div> -->
 
-<div class="container">
-  <div id="enter">
-    <span><a class="active" href="home.html"></a></span>
-  </div>
+
+<body>
+   <div class="stagger-visualizer">
 </div>
 
+<div class="hidden">
+  <div id="name">
+    <pre><p>
+        __/\\\\\\\\\\\\\______________/\\\________________________/\\\________/\\\____________/\\\\____________/\\\\____________/\\\\\\\\\\\\\\\_        
+        _\/\\\/////////\\\___________\/\\\_______________________\/\\\_______\/\\\___________\/\\\\\\________/\\\\\\___________\/\\\///////////__       
+         _\/\\\_______\/\\\___________\/\\\_______________________\/\\\_______\/\\\___________\/\\\//\\\____/\\\//\\\___________\/\\\_____________      
+          _\/\\\\\\\\\\\\\/____________\/\\\_______________________\/\\\_______\/\\\___________\/\\\\///\\\/\\\/_\/\\\___________\/\\\\\\\\\\\_____     
+           _\/\\\/////////______________\/\\\_______________________\/\\\_______\/\\\___________\/\\\__\///\\\/___\/\\\___________\/\\\///////______    
+            _\/\\\_______________________\/\\\_______________________\/\\\_______\/\\\___________\/\\\____\///_____\/\\\___________\/\\\_____________   
+             _\/\\\_______________________\/\\\_______________________\//\\\______/\\\____________\/\\\_____________\/\\\___________\/\\\_____________  
+              _\/\\\_______________________\/\\\\\\\\\\\\\\\____________\///\\\\\\\\\/_____________\/\\\_____________\/\\\___________\/\\\\\\\\\\\\\\\_ 
+               _\///________________________\///////////////_______________\/////////_______________\///______________\///____________\///////////////__
+   </p></pre>
+  </div>
+  <div id=version><pre>76 65 72 73 69 6F 6E  31 2E 30 35 </pre></div>
+  </div>
+    <video id="indexvid" controls autoplay muted id="loop">
+        <source src="./assets/Merge2.mp4" type="video/mp4">
+    </video>
+    <video id="indexvid" controls autoplay muted id="loop">
+        <source src="./assets/Merge3tv.mp4" type="video/mp4">
+    </video>
+    <!-- <script>
+      var x = document.getElementById("loop")
+      function disableControls() { 
+  x.controls = false;
+  x.load();
+} 
+        function toggleMute() {
+          var video=document.getElementById("loop");
+          if(video.muted){
+          video.muted = false;
+          } else {
+            debugger;
+           vieo.muted = true;
+           video.play()
+            }
+          }
+    </script> -->
+ </div> 
+</div>
 <script src="https://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="assets/js/enter.js"></script>
+<script src="./assets/js/enter.js"></script>
 
+
+            
 </body>
 </html>
