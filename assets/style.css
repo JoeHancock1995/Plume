@@ -44,10 +44,9 @@ h1{
 
   }
   .stagger-visualizer div {
-    /*position: absolute;*/
+    position: absolute;
     width: 5rem;
     height: 5rem;
-
     background-color: #FFF;
   }
 .hidden{
