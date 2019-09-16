@@ -1,7 +1,7 @@
 
 const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
 const fragment = document.createDocumentFragment();
-const grid = [40, 34];
+const grid = [17, 8];
 const col = grid[0];
 const row = grid[1];
 const numberOfElements = col * row;
@@ -18,6 +18,10 @@ const staggersAnimation = anime.timeline({
 })
 
 .add({
+    boxShadow: [
+        '0px 0px 0px 0px rgba(0,0,0,.5)',
+        '20px 20px 10px 0px rgba(0,0,0,.5)'
+      ],
   translateX: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'x'}),
   translateY: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'y'}),
   rotate: 0,
@@ -26,6 +30,10 @@ const staggersAnimation = anime.timeline({
   delay: anime.stagger(4, {from: 'center'})
 })
 .add({
+    boxShadow: [
+        '0px 0px 0px 0px rgba(0,0,0,.5)',
+        '20px 20px 10px 0px rgba(0,0,0,.5)'
+      ],
   translateX: 0,
   translateY: 0,
   scale: .5,
@@ -35,10 +43,52 @@ const staggersAnimation = anime.timeline({
   delay: anime.stagger(100, {grid: grid, from: 'center'})
 })
 .add({
+    boxShadow: [
+        '0px 0px 0px 0px rgba(0,0,0,.5)',
+        '20px 20px 10px 0px rgba(0,0,0,.5)'
+      ],
   scaleY: 1,
   scale: 1,
   delay: anime.stagger(20, {grid: grid, from: 'center'})
 })
+.add({
+    boxShadow: [
+        '0px 0px 0px 0px rgba(0,0,0,.5)',
+        '20px 20px 10px 0px rgba(0,0,0,.5)'
+      ],
+    translateX: 0,
+    translateY: 0,
+    scale: .5,
+    scaleX: 1,
+    rotate: 0,
+    duration: 1000,
+    delay: anime.stagger(100, {grid: grid, from: 'center'})
+  })
+  .add({
+    scaleY: 1,
+    scale: 1,
+    delay: anime.stagger(20, {grid: grid, from: 'center'})
+  })
+  .add({
+    backgroundColor: '#000000',
+    delay: anime.stagger(20, {grid: grid, from: 'center'})
+  })
+.add({
+    
+    translateX: anime.stagger('.65rem', {grid: grid, from: 'center', axis: 'x'}),
+    translateY: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'y'}),
+          targets:'.hidden div',
+          scaleY: .5,
+          scale: .5,
+        })
+.add({
+
+    translateY: anime.stagger('10rem', {grid: grid, from: 'center', axis: 'y'}),
+        targets:'.hidden div',
+            scaleY: 1,
+            scale: 1,
+        });
+            
 staggersAnimation.play();
 
 {
@@ -51,7 +101,7 @@ staggersAnimation.play();
         lerp: (a, b, n) =>  (1 - n) * a + n * b
     };
 
-}
-var enterContent = anime({
-    
-})
+};
+
+
+
