@@ -1,4 +1,8 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+}
 body {
     display: flex;
     flex-wrap: wrap;
@@ -36,4 +40,23 @@ body {
     color: white;
     font-weight: bolder;
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0);
+}
+
+/* #video1{
+    
+}  */
+#video2{
+    padding-top:2%;
+    margin-left:10%; 
+}
+#video3{
+margin-left: -75%;
+}
+#video4{
+margin-left: -85%;
+}
+#video5{
+    margin-left:80%;
+    /* width: 75%;
+    height: 75%; */
 }

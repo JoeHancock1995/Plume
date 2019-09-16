@@ -72,18 +72,16 @@ const staggersAnimation = anime.timeline({
 .add({
     Color:'#ffffff',
     translateY: anime.stagger('10rem', {grid: grid, from: 'center', axis: 'y'}),
-        targets:'.hidden div',
-            scaleY: 1,
-            scale: 1,
+    targets:'.hidden div',
+        scaleY: 1,
+        scale: 1,
         })
 .add({
-    Color:'#ffffff',
-    translateY: anime.stagger('4rem', {grid: grid, from: 'center', axis: 'x'}),
-                targets:'.hidden div',
-                    scaleY: 1,
-                    scale: .9,
-                });
-            
+    translateY:anime.stagger('9rem', {grid:grid, from:'center', axis: 'y' }),
+    targets:'.video-container div',
+    scaleY: 1
+});
+                            
 staggersAnimation.play();
 
 {
@@ -101,6 +99,11 @@ staggersAnimation.play();
 $(document).ready(function(){
     $(".hidden").show(6000);
     });
+
+
+    $(document).ready(function(){
+        $(".video1").show(8000);
+        });
 
 
 
