@@ -1,7 +1,7 @@
 
 const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
 const fragment = document.createDocumentFragment();
-const grid = [17, 8];
+const grid = [18, 9];
 const col = grid[0];
 const row = grid[1];
 const numberOfElements = col * row;
@@ -18,10 +18,6 @@ const staggersAnimation = anime.timeline({
 })
 
 .add({
-    boxShadow: [
-        '0px 0px 0px 0px rgba(0,0,0,.5)',
-        '20px 20px 10px 0px rgba(0,0,0,.5)'
-      ],
   translateX: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'x'}),
   translateY: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'y'}),
   rotate: 0,
@@ -74,20 +70,19 @@ const staggersAnimation = anime.timeline({
     delay: anime.stagger(20, {grid: grid, from: 'center'})
   })
 .add({
-    
-    translateX: anime.stagger('.65rem', {grid: grid, from: 'center', axis: 'x'}),
-    translateY: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'y'}),
-          targets:'.hidden div',
-          scaleY: .5,
-          scale: .5,
-        })
-.add({
-
+    Color:'#ffffff',
     translateY: anime.stagger('10rem', {grid: grid, from: 'center', axis: 'y'}),
         targets:'.hidden div',
             scaleY: 1,
             scale: 1,
-        });
+        })
+.add({
+    Color:'#ffffff',
+    translateY: anime.stagger('4rem', {grid: grid, from: 'center', axis: 'x'}),
+                targets:'.hidden div',
+                    scaleY: 1,
+                    scale: .9,
+                });
             
 staggersAnimation.play();
 
@@ -102,6 +97,11 @@ staggersAnimation.play();
     };
 
 };
+
+$(document).ready(function(){
+    $(".hidden").show(6000);
+    });
+
 
 
 

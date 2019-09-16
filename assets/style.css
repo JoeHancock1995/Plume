@@ -1,3 +1,4 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
 body {
     display: flex;
     flex-wrap: wrap;
@@ -25,8 +26,10 @@ body {
   }
 .hidden{
     box-sizing: border-box;
-    color: #FFF
+    color: white;
+    display: none;
 }
+
 #name.p{
 
     text-align: center;
