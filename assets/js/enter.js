@@ -69,6 +69,10 @@ const staggersAnimation = anime.timeline({
     backgroundColor: '#000000',
     delay: anime.stagger(20, {grid: grid, from: 'center'})
   })
+  .add({
+    backgroundColor: '##00FF00',
+    delay: anime.stagger(20, {grid: grid, from: 'center'})
+  })
 .add({
     Color:'#ffffff',
     translateY: anime.stagger('10rem', {grid: grid, from: 'center', axis: 'y'}),
