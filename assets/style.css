@@ -1,16 +1,38 @@
-html, body {
+body {
     margin: 0; 
     height: 100%; 
-    overflow: hidden;
+background-color: black;
 }
-body {
+.title{
+  font-family: "seven_segmentregular";
+  color: greenyellow;
+  position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display:block;
+}
+#name{
+  font-family: "GothicPixels";
+  font-size: 58px;
+}
+#version{
+  font-family: "GothicPixels";
+  font-size: 22px;
+}
+#myScene{
+
+}
+/* body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
-  .stagger-visualizer {
+    align-items: center; */
+    /* background-color: black;
+    
+  } */
+  /* .stagger-visualizer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,11 +50,7 @@ body {
     height: 5rem;
     background-color: #FFF;
   }
-.hidden{
-    box-sizing: border-box;
-    color: white;
-    display: none;
-}
+
 
 #name.p{
 
@@ -40,15 +58,15 @@ body {
     color: white;
     font-weight: bolder;
     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0);
-}
+} */
 
 /* #video1{
     
 }  */
-#video2{
+/* #video2{
     padding-top:2%;
     margin-left:10%; 
-}
+} */
 #video3{
 margin-left: -75%;
 }

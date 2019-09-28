@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JoeHancock1995/Plume#readme",
   "dependencies": {
-    "animejs": "^3.1.0"
+    "animejs": "^3.1.0",
+    "three": "^0.108.0"
   }
 }

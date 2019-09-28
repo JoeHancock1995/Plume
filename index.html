@@ -5,85 +5,63 @@
   <meta charset="utf-8">
   <title>PLUME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
-  <script src="https://use.typekit.net/nlq1kdt.js"></script>
-  <script src="./assets/anime-master/lib/anime.min.js"></script>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <!-- <script src="./assets/js/vendors/anime-master/lib/anime.min.js"></script> -->
 </head>
 
 
 
 <body>
-  
-   <div class="stagger-visualizer">
-</div>
 
+<div class="title">
 
- 
-  <div class="hidden">
-    <div id="name"><pre></p>
-        ___                     ___  
-       |   | |     |   | |\ /| |     
-       |---  |     |   | | v | |---  
-       |     |     |   | |   | |     
-              ---   ---         ---</p></pre>
-    </div>
-    <div id=version>
-      <pre>76 65 72 73 69 6F 6E  31 2E 30 35 </pre>
-    </div>
+  <div id="name"><p>P L U M E</p></div>
+  <div id=version><p>version 1.09</p></div>
+  <div id="myScene"></div>
+
+<div class="video-container">
+  <div id="video1">  
+    <video width="300px" height="225px" autoplay loop muted="autoplay">
+      <source src="./assets/videos/glitchednuke.mp4" type="video/mp4" />
+    </video>
   </div>
-    <div class="video-container">
-    <div id="video1">  
-      <video width="300px" height="225px" autoplay loop muted="autoplay">
-        <source src="./assets/glitchednuke.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div id="video3">
-        <video width="10%" height="10%" id="indexvid" autoplay muted loop>
-            <source src="./assets/blackhole3.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div id="video4">
-        <video width="10%" height="10%" id="indexvid" autoplay muted loop>
-            <source src="./assets/blackhole1.mp4" type="video/mp4">
-        </video>     
-    </div>
-    <div id="video2">
-        <video width="25%" height="25%" autoplay loop muted="autoplay">
-                <source src="./assets/Merge3tv.mp4" type="video/mp4" />
-          </video>
-      </div>
-    <!-- <div id="video5">
-        <video width="300px" height="225px" id="indexvid" autoplay muted loop>
-            <source src="./assets/glitchednuke.mp4" type="video/mp4">
-        </video>
-      </div> -->
-    </div>
+  <div id="video2">
+    <video width="25%" height="25%" autoplay loop muted="autoplay">
+      <source src="./assets/videos/blackhole1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<script>
+      
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  document.getElementById("myScene").appendChild( renderer.domElement );
+
+  var geometry = new THREE.TetrahedronGeometry( 7, 7, 1 );
+  var material = new THREE.LineDashedMaterial( { color: 0xffffff } );
+  var cube = new THREE.Line( geometry, material );
+  scene.add( cube );
+
+  camera.position.z = 2;
   
 
-    <!-- <script>
-      var x = document.getElementById("loop")
-      function disableControls() { 
-  x.controls = false;
-  x.load();
-} 
-        function toggleMute() {
-          var video=document.getElementById("loop");
-          if(video.muted){
-          video.muted = false;
-          } else {
-            debugger;
-           vieo.muted = true;
-           video.play()
-            }
-          }
-    </script> -->
- </div> 
+  function animate() {
+    requestAnimationFrame( animate );
+    cube.rotation.x += 0.0001;
+    cube.rotation.y += 0.0001;
+    renderer.render ( scene, camera );
+  }
+  animate();
+  
+</script>
 </div>
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="./assets/js/enter.js"></script>
 
-
-            
+<!-- <script src="./assets/js/app.js"></script> -->      
 </body>
 </html>
