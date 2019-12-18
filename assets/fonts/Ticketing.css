@@ -1,0 +1,7 @@
+
+@font-face {
+    font-family:"Ticketing";
+    src:url("Ticketing.woff2") format("woff2"),url("Ticketing.woff") format("woff"),url("Ticketing.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+        

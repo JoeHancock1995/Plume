@@ -1,0 +1,7 @@
+
+@font-face {
+    font-family:"Black Forest Regular";
+    src:url("BlackForest.woff2") format("woff2"),url("BlackForest.woff") format("woff"),url("BlackForest.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+        

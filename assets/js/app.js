@@ -1,135 +1,64 @@
+let container;
+let camera;
+let renderer;
+let scene;
+let mesh;
 
-const staggerVisualizerEl = document.querySelector('.stagger-visualizer');
-const fragment = document.createDocumentFragment();
-const grid = [18, 9];
-const col = grid[0];
-const row = grid[1];
-const numberOfElements = col * row;
-for (let i = 0; i < numberOfElements; i++) {
-  fragment.appendChild(document.createElement('div'));
+function init() {
+
+  // Get a reference to the container element that will hold our scene
+  container = document.querySelector( '#scene-container' );
+
+  // create a Scene
+  scene = new THREE.Scene();
+
+  scene.background = new THREE.Color( 0x8FBCD4 );
+
+  // set up the options for a perspective camera
+  const fov = 35; // fov = Field Of View
+  const aspect = container.clientWidth / container.clientHeight;
+
+  const near = 0.1;
+  const far = 100;
+
+  camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
+
+  // every object is initially created at ( 0, 0, 0 )
+  // we'll move the camera back a bit so that we can view the scene
+  camera.position.set( 0, 0, 10 );
+
+  // create a geometry
+  const geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
+
+  // create a default (white) Basic material
+  const material = new THREE.MeshBasicMaterial();
+
+  // create a Mesh containing the geometry and material
+  mesh = new THREE.Mesh( geometry, material );
+
+  // add the mesh to the scene object
+  scene.add( mesh );
+
+  // create a WebGLRenderer and set its width and height
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize( container.clientWidth, container.clientHeight );
+
+  renderer.setPixelRatio( window.devicePixelRatio );
+
+  // add the automatically created <canvas> element to the page
+  container.appendChild( renderer.domElement );
+
 }
-staggerVisualizerEl.appendChild(fragment);
-const staggersAnimation = anime.timeline({
-  targets: '.stagger-visualizer div',
-  easing: 'easeInOutSine',
-  delay: anime.stagger(50),
-  loop: false,
-  autoplay: false
-})
 
-.add({
-  translateX: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'x'}),
-  translateY: anime.stagger('1rem', {grid: grid, from: 'center', axis: 'y'}),
-  rotate: 0,
-  scaleX: 1,
-  scaleY: .25,
-  delay: anime.stagger(4, {from: 'center'})
-})
-.add({
-    boxShadow: [
-        '0px 0px 0px 0px rgba(0,0,0,.5)',
-        '20px 20px 10px 0px rgba(0,0,0,.5)'
-      ],
-  translateX: 0,
-  translateY: 0,
-  scale: .5,
-  scaleX: 1,
-  rotate: 0,
-  duration: 1000,
-  delay: anime.stagger(100, {grid: grid, from: 'center'})
-})
-.add({
-    boxShadow: [
-        '0px 0px 0px 0px rgba(0,0,0,.5)',
-        '20px 20px 10px 0px rgba(0,0,0,.5)'
-      ],
-  scaleY: 1,
-  scale: 1,
-  delay: anime.stagger(20, {grid: grid, from: 'center'})
-})
-.add({
-    boxShadow: [
-        '0px 0px 0px 0px rgba(0,0,0,.5)',
-        '20px 20px 10px 0px rgba(0,0,0,.5)'
-      ],
-    translateX: 0,
-    translateY: 0,
-    scale: .5,
-    scaleX: 1,
-    rotate: 0,
-    duration: 1000,
-    delay: anime.stagger(100, {grid: grid, from: 'center'})
-  })
-  .add({
-    scaleY: 1,
-    scale: 1,
-    delay: anime.stagger(20, {grid: grid, from: 'center'})
-  })
-  .add({
-    backgroundColor: '#000000',
-    delay: anime.stagger(20, {grid: grid, from: 'center'})
-  })
-  .add({
-    backgroundColor: '##00FF00',
-    delay: anime.stagger(20, {grid: grid, from: 'center'})
-  })
-.add({
-    Color:'#ffffff',
-    translateY: anime.stagger('10rem', {grid: grid, from: 'center', axis: 'y'}),
-    targets:'.hidden div',
-        scaleY: 1,
-        scale: 1,
-        })
-.add({
-    translateY:anime.stagger('9rem', {grid:grid, from:'center', axis: 'y' }),
-    targets:'.video-container div',
-    scaleY: 1
-});
-                            
-staggersAnimation.play();
+function animate() {
 
-{
-    const MathUtils = {
-        lineEq: (y2, y1, x2, x1, currentVal) => {
-            // y = mx + b 
-            var m = (y2 - y1) / (x2 - x1), b = y1 - m * x1;
-            return m * currentVal + b;
-        },
-        lerp: (a, b, n) =>  (1 - n) * a + n * b
-    };
+  // render, or 'create a still image', of the scene
+  renderer.render( scene, camera );
 
-};
+}
 
-$(document).ready(function(){
-    $(".hidden").show(6000);
-    });
+// call the init function to set everything up
+init();
 
-
-    $(document).ready(function(){
-        $(".video1").show(8000);
-        });
-
-
-        var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-    
-      var renderer = new THREE.WebGLRenderer();
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
-    
-      var geometry = new THREE.TetrahedronGeometry( 4, 6, 1 );
-      var material = new THREE.LineDashedMaterial( { color: 0xffffff } );
-      var cube = new THREE.Line( geometry, material );
-      scene.add( cube );
-    
-      camera.position.z = 12;
-      
-    
-      function animate() {
-        requestAnimationFrame( animate );
-        cube.rotation.x += 0.001;
-        cube.rotation.y += 0.001;
-        renderer.render ( scene, camera );
-      }
-      animate();
-
+// then call the animate function to render the scene
+animate();

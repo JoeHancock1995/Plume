@@ -1,0 +1,7 @@
+
+@font-face {
+    font-family:"GothicPixels";
+    src:url("GothicPixels.woff2") format("woff2"),url("GothicPixels.woff") format("woff"),url("GothicPixels.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+        

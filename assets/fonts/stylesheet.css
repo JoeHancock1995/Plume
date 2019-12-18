@@ -1,96 +1,33 @@
+
 @font-face {
-    font-family: 'Karma Future';
-    src: url('KarmaFuture-Regular.woff2') format('woff2'),
-        url('KarmaFuture-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family:"Conman Regular";
+    src:url("ConmanRegular.woff2") format("woff2"),url("ConmanRegular.woff") format("woff"),url("ConmanRegular.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Conman Regular";
+    src:url("ConmanRegular.woff2") format("woff2"),url("ConmanRegular.woff") format("woff"),url("ConmanRegular.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Warsaw Gothic";
+    src:url("WarsawGothic.woff2") format("woff2"),url("WarsawGothic.woff") format("woff"),url("WarsawGothic.otf") format("opentype");
+    font-style:normal;font-weight:400;
+}
+
+
+@font-face {
+    font-family:"Ticketing";
+    src:url("Ticketing.woff2") format("woff2"),url("Ticketing.woff") format("woff"),url("Ticketing.otf") format("opentype");
+    font-style:normal;font-weight:400;
 }
 
 @font-face {
-    font-family: 'en hollow tiles';
-    src: url('en-hollow-tiles.woff2') format('woff2'),
-        url('en-hollow-tiles.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family:"Crash";
+    src:url("CRASH___.woff2") format("woff2"),url("CRASH___.woff") format("woff"),url("CRASH___.otf") format("opentype");
+    font-style:normal;font-weight:400;
 }
-
-@font-face {
-    font-family: 'Karma Suture';
-    src: url('KarmaSuture-Regular.woff2') format('woff2'),
-        url('KarmaSuture-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'BitRussian';
-    src: url('BitRussian.woff2') format('woff2'),
-        url('BitRussian.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Rocketman';
-    src: url('Rocketman.woff2') format('woff2'),
-        url('Rocketman.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Nonfiction';
-    src: url('Nonfiction.woff2') format('woff2'),
-        url('Nonfiction.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Kredit';
-    src: url('Kredit-Regular.woff2') format('woff2'),
-        url('Kredit-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Retroscape';
-    src: url('Retroscape.woff2') format('woff2'),
-        url('Retroscape.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ThreeFourTwoTwo';
-    src: url('ThreeFourTwoTwo.woff2') format('woff2'),
-        url('ThreeFourTwoTwo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Squint';
-    src: url('Squint.woff2') format('woff2'),
-        url('Squint.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Terminal Grotesque Open';
-    src: url('TerminalGrotesque-Open.woff2') format('woff2'),
-        url('TerminalGrotesque-Open.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JustLetters';
-    src: url('JustLetters.woff2') format('woff2'),
-        url('JustLetters.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-

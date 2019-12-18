@@ -1,80 +1,184 @@
-body {
-    margin: 0; 
-    height: 100%; 
-background-color: black;
+*{
+  background-color: black;
+  color: white;
 }
-.title{
+#name{
+  font-family:"Crash";
+  font-size: 62px ;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 5px;
+}
+#title{
+  text-align: center;
+  font-family: 'Conman Regular';
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 0px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.footer {
+  font-family: 'ticketing';
+  font-size: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* *{
+  background-color: black;
+  color: white;
+  width:  100%;
+}
+.name {
+  font-family: 'Warsaw Gothic Extended Outline';
+  text-align: center;
+  font-size: 52px;
+}
+canvas{
+  float: left;
+  margin-top: ;
+} */
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+margin: 0; 
+height: 100%; 
+background-color: black;
+justify-content: center;
+align-items: center;
+text-align: center;
+display: flex;
+}
+
+.btn {
+  width: 99%;
+  border: 5px solid black;
+  position: sticky;
+ margin-top: 0px;
+  font-size: 66px; */
+  /* line-height: 1.5; */
+  /* color: white;
+  text-decoration: none;
+  background-color: black;
+  outline: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: 0.05s;
+  font-family: "04b 30";
+}
+
+.btn-marquee span {
+  display: block;
+  padding: 20 20px; */
+  /* animation: move-left 15s linear infinite; */
+/* }
+.btn-marquee span::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+@keyframes jittery {
+  5%, 50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+@keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@keyframes up-down {
+  50% {
+    transform: translateY(-20px) scaleX(-1);
+  }
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 hsl(var(--hue), 100%, 41%);
+  }
+}
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+/* .title{
   font-family: "seven_segmentregular";
   color: white;
   position: absolute;
-	top: 10px;
+	top: 0px;
 	width: 100%;
 	text-align: center;
 	z-index: 100;
 	display:block;
-}
-#name{
-  font-family: "GothicPixels";
-  font-size: 58px;
-}
-#version{
-  font-family: "GothicPixels";
-  font-size: 22px;
-}
-#myScene{
-
-}
-/* body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
-    /* background-color: black;
-    
-  } */
-  /* .stagger-visualizer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-shadow: 10px 10px 10px 0 rgba(0,0,0, .5);
-  }
-  .stagger-visualizer div {
-
-    width: 5rem;
-    height: 5rem;
-    background-color: #FFF;
-  }
-
-
-#name.p{
-
-    text-align: center;
-    color: white;
-    font-weight: bolder;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0);
 } */
 
-/* #video1{
-    
-}  */
-/* #video2{
-    padding-top:2%;
-    margin-left:10%; 
-} */
-#video3{
-margin-left: -75%;
-}
-#video4{
-margin-left: -85%;
-}
-#video5{
-    margin-left:80%;
-    /* width: 75%;
-    height: 75%; */
-}
+
