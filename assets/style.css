@@ -1,6 +1,27 @@
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 100%; 
+  top:0;
+  left: 0;
+  background: #000;
+  z-index:9999
+}
+
+#cover-image {
+ position: absolute;
+ 
+ top: 49%;
+ left: 49%;
+ z-index: 100;
+ height: 50px;
+ width: 50px;
+}
+
 *{
   background-color: black;
   color: white;
+  width: 100%;
 }
 #name{
   font-family:"Crash";
@@ -53,132 +74,10 @@
   }
 }
 
-/* *{
-  background-color: black;
-  color: white;
-  width:  100%;
-}
-.name {
-  font-family: 'Warsaw Gothic Extended Outline';
-  text-align: center;
-  font-size: 52px;
-}
+
 canvas{
   float: left;
-  margin-top: ;
-} */
-
-
-
-/* @import url(https://fonts.googleapis.com/css?family=Lato);
-
-body {
-margin: 0; 
-height: 100%; 
-background-color: black;
-justify-content: center;
-align-items: center;
-text-align: center;
-display: flex;
 }
 
-.btn {
-  width: 99%;
-  border: 5px solid black;
-  position: sticky;
- margin-top: 0px;
-  font-size: 66px; */
-  /* line-height: 1.5; */
-  /* color: white;
-  text-decoration: none;
-  background-color: black;
-  outline: transparent;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
-  transition: 0.05s;
-  font-family: "04b 30";
-}
-
-.btn-marquee span {
-  display: block;
-  padding: 20 20px; */
-  /* animation: move-left 15s linear infinite; */
-/* }
-.btn-marquee span::after {
-  position: absolute;
-  content: attr(data-text);
-  top: 0;
-  left: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-@keyframes jittery {
-  5%, 50% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.9);
-  }
-  15% {
-    transform: scale(1.15);
-  }
-  20% {
-    transform: scale(1.15) rotate(-5deg);
-  }
-  25% {
-    transform: scale(1.15) rotate(5deg);
-  }
-  30% {
-    transform: scale(1.15) rotate(-3deg);
-  }
-  35% {
-    transform: scale(1.15) rotate(2deg);
-  }
-  40% {
-    transform: scale(1.15) rotate(0);
-  }
-}
-@keyframes jelly {
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-}
-@keyframes up-down {
-  50% {
-    transform: translateY(-20px) scaleX(-1);
-  }
-}
-@keyframes pulse {
-  from {
-    box-shadow: 0 0 0 0 hsl(var(--hue), 100%, 41%);
-  }
-}
-@keyframes move-left {
-  to {
-    transform: translateX(-100%);
-  }
-} */
-
-/* .title{
-  font-family: "seven_segmentregular";
-  color: white;
-  position: absolute;
-	top: 0px;
-	width: 100%;
-	text-align: center;
-	z-index: 100;
-	display:block;
-} */
 
 
