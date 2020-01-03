@@ -11,8 +11,8 @@
 #cover-image {
  position: absolute;
  
- top: 49%;
- left: 49%;
+ top: 48%;
+ left: 48%;
  z-index: 100;
  height: 50px;
  width: 50px;
@@ -57,6 +57,24 @@
   font-family: 'ticketing';
   font-size: 10px;
 }
+.vectors {
+  display: inline-block;
+  vertical-align: middle;
+}
+#github{
+  height: 50px;
+  width: 50px;
+  float: right;
+  padding: 0%;
+  margin-left: 10px;
+}
+/* remove until authentication can be made*/
+
+/* #email {
+  height: 72px;
+  width: 72px;
+  float: right;
+} */
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
