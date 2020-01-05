@@ -22,18 +22,59 @@
   color: white;
   width: 99%;
 }
+
+/*Name and title*/
+.name-box{
+  float: left;
+  width: 40%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 #name{
   font-family:"Crash";
   font-size: 62px ;
   letter-spacing: 5px;
   text-align: left;
-  margin: 5px;
-
+  float: left;
 }
 #title{
   text-align: left;
+  float: left;
   font-family: 'Conman Regular';
 }
+
+/*navbar formatting*/
+.nav {
+  float: right;
+  margin-top: 20px;
+  width: 50%;
+  font-family: 'Conman Regular';
+  font-size: 22px;
+}
+ul{
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+li{
+float: right;
+width: 160px;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  width: 160px;
+}
+
+li a:hover {
+  color: rgb(156, 1, 161);
+}
+
+/*picture container*/
 .container{
   margin-top: 5%;
 }
