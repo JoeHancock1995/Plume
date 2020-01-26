@@ -20,7 +20,7 @@
 *{
   background-color: black;
   color: white;
-  width: 99%;
+  width: 100%;
 }
 
 /*Name and title*/
@@ -46,15 +46,15 @@
 /*navbar formatting*/
 .nav {
   float: right;
-  margin-top: 20px;
-  width: 50%;
+  margin-top: 1px;
+  width: 40%;
   font-family: 'Conman Regular';
-  font-size: 22px;
+  font-size: 16px;
 }
 ul{
   list-style-type: none;
   overflow: hidden;
-  margin: 0;
+  margin-right: 0;
   padding: 0;
 }
 li{
@@ -65,9 +65,9 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 14px;
+  padding: 5px 5px;
   text-decoration: none;
-  width: 160px;
+  width: 140px;
 }
 
 li a:hover {
@@ -76,7 +76,7 @@ li a:hover {
 
 /*picture container*/
 .container{
-  margin-top: 5%;
+  margin-top: 1%;
 }
 .row {
   display: flex;
@@ -86,8 +86,8 @@ li a:hover {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  flex: 10%;
-  max-width: 10%;
+  flex: 25%;
+  max-width: 25%;
   padding: 0 0px;
 }
 
@@ -112,6 +112,27 @@ li a:hover {
   padding: 0%;
   margin-left: 10px;
 }
+
+
+.text1{font-size: 52px;
+  text-align: left;
+  float: left;
+  font-family: 'Crash'; }
+  .view{
+  margin-top: 4%;
+  margin-left: 15%;
+  font-size: 18px;
+  font-family: 'Ionic Charge';
+  color: white;
+  }
+  #renderCanvas {
+      margin-top: 1%;
+      margin-left: 10%;
+      width: 80%;
+      height: 80%;
+      touch-action: none;
+      border: 20px double white;
+  }
 /* remove until authentication can be made*/
 
 /* #email {

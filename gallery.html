@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>PLUME-GALLERY</title>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="assets/fonts/stylesheet.css">
+
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+        <script src="https://cdn.babylonjs.com/babylon.max.js"></script>
+        
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    </head>
+
+   <body>
+
+    <div class="text1">PLUME</div>
+    <div class="nav">Image Gallery</div>
+    <div class="view">View art gallery in the first rendering of the PLUME gallery by clicking below and using the arrows in addition to the mouse to look around</div>
+
+    <canvas id="renderCanvas" touch-action="none"></canvas> 
+
+    <div class="footer">
+        <footer>
+          <div class="vectors">
+            <div id="github">
+              <a class="active" href="https://github.com/JoeHancock1995"><img src="./assets/images/vectors/github-10-48.png" style="width: 50%"></a>
+            </div>
+          <div class="footerbox">
+            <div class="footertext"> Copyright © 2019 <a href="plumesounding.com">PLUME</a>All Rights Reserved</div>
+          </div>
+        </footer>
+      </div>
+    <script>
+        var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
+        var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
+
+                
+        var createScene = function () { //creates scene, light, camera
+
+            var scene = new BABYLON.Scene(engine); 
+
+            var light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
+
+            var camera = new BABYLON.UniversalCamera("UniversalCamera", new BABYLON.Vector3(15, 11, -12), scene);
+                camera.setTarget(BABYLON.Vector3.Zero());
+                camera.attachControl(canvas, true);
+                
+            var ground = BABYLON.MeshBuilder.CreateBox("ground", {width: 104, height: 126, depth: 3}, scene);
+            var ceiling = BABYLON.MeshBuilder.CreateBox("ceiling", {width: 104, height: 126, depth: 3}, scene);
+
+            var box = BABYLON.MeshBuilder.CreateBox("box", {height: 15, width: 31, depth: 2}, scene); //behind the camera
+            var box2 =BABYLON.MeshBuilder.CreateBox("box2", {height: 15, width: 2, depth: 86}, scene); //camera left
+            var box3 = BABYLON.MeshBuilder.CreateBox("box3", {height: 15, width: 100, depth: 2}, scene); //camera front
+            var box4 = BABYLON.MeshBuilder.CreateBox("box4", {height: 15, width: 2, depth: 124}, scene); //camera right
+            var box5 = BABYLON.MeshBuilder.CreateBox("box5", {height: 15, width: 2, depth: 124}, scene); // end of hall- far end
+            var box6 = BABYLON.MeshBuilder.CreateBox("box6", {height: 15, width: 100, depth: 2}, scene);  // behind camera far back
+            var box7 = BABYLON.MeshBuilder.CreateBox("box7", {height: 15, width: 38, depth: 2}, scene); // back quadrant divider wall
+            var galleryCube = BABYLON.MeshBuilder.CreateBox("galleryCube", {height: 25, width: 2.5, depth: 2.5}, scene);
+            var galleryCube2 = BABYLON.MeshBuilder.CreateBox("galleryCube2", {height: 25, width: 2.5, depth: 2.5}, scene);
+            var galleryCube3 = BABYLON.MeshBuilder.CreateBox("galleryCube", {height: 25, width: 2.5, depth: 2.5}, scene);
+            var galleryCube4 = BABYLON.MeshBuilder.CreateBox("galleryCube2", {height: 25, width: 2.5, depth: 2.5}, scene);
+
+            //camera viewing wall
+            var picture = BABYLON.MeshBuilder.CreateBox("picture", {height: 10, width: 20, depth: .2}, scene); //gallery picture 1
+            var picture2 = BABYLON.MeshBuilder.CreateBox("picture2", {height: 10, width:20 , depth: .2}, scene); //gallery picture 2
+            var picture3 = BABYLON.MeshBuilder.CreateBox("picture3", {height: 10 , width: 20, depth: .2}, scene); //gallery picture 3
+            var picture4 = BABYLON.MeshBuilder.CreateBox("picture4", {height: 10, width: 20, depth: .2}, scene); //gallery picture 4
+            // var picture5_2 = BABYLON.MeshBuilder.CreateBox("picture5_2", {height: 10, width: 20, depth: .2}, scene);
+            var picture5 = BABYLON.MeshBuilder.CreateBox("picture5", {height: 10, width: 20, depth: .2}, scene); //gallery picture 5
+            //behind the camera wall
+            var picture6 = BABYLON.MeshBuilder.CreateBox("picture6", {height: 17, width: .2, depth: 10}, scene); //gallery picture 6
+            var picture7 = BABYLON.MeshBuilder.CreateBox("picture7", {height: 17, width: .2, depth: 10}, scene); //gallery picture 6
+            var picture8 = BABYLON.MeshBuilder.CreateBox("picture8", {height: 10, width: 17, depth: .2}, scene); //gallery picture 6
+            //left behind camera wall back quadrant
+            var picture9 = BABYLON.MeshBuilder.CreateBox("picture9", {height: 17, width: .2, depth: 10}, scene); //gallery picture 6
+            var picture10 = BABYLON.MeshBuilder.CreateBox("picture10", {height: 10, width: .2, depth: 17}, scene); //gallery picture 6
+            var picture11 = BABYLON.MeshBuilder.CreateBox("picture11", {height: 10, width: .2, depth: 17}, scene); //gallery picture 6
+            //far back wall
+            var picture12 = BABYLON.MeshBuilder.CreateBox("picture", {height: 10, width: 20, depth: .2}, scene); //gallery picture 1
+            var picture13 = BABYLON.MeshBuilder.CreateBox("picture2", {height: 10, width:20 , depth: .2}, scene); //gallery picture 2
+            var picture14 = BABYLON.MeshBuilder.CreateBox("picture3", {height: 10 , width: 20, depth: .2}, scene); //gallery picture 3
+            var picture15 = BABYLON.MeshBuilder.CreateBox("picture4", {height: 10, width: 20, depth: .2}, scene); //gallery picture 4
+            // var picture16 = BABYLON.MeshBuilder.CreateBox("picture5", {height: 10, width: 12.5, depth: .2}, scene); //gallery picture 5
+
+            //Walls location
+            ground.position = new BABYLON.Vector3(-26, 0, -38);
+            ceiling.position = new BABYLON.Vector3(-26, 15, -38);
+
+            box.position = new BABYLON.Vector3(7.5, 7.5, -36);
+            box2.position = new BABYLON.Vector3(-8, 7.5, -36);
+            box3.position = new BABYLON.Vector3(-26.5, 7.5, 22.5);
+            box4.position = new BABYLON.Vector3(24, 7.5, -38);
+            box5.position = new BABYLON.Vector3(-76, 7.5, -38);
+            box6.position = new BABYLON.Vector3(-26.5, 7.51, -98.5);
+            box7.position = new BABYLON.Vector3( -40, 7.5, -80);
+            galleryCube.position = new BABYLON.Vector3( -50, 7.5, -10);
+            galleryCube2.position = new BABYLON.Vector3( -50, 7.5, -50);
+            galleryCube3.position = new BABYLON.Vector3( -25, 7.5, -10);
+            galleryCube4.position = new BABYLON.Vector3( -25, 7.5, -50);
+
+
+            picture.position = new BABYLON.Vector3(10, 7.5, 21.5);
+            picture2.position = new BABYLON.Vector3(-14, 7.5, 21.5);
+            picture3.position = new BABYLON.Vector3(-38, 7.5, 21.5);
+            picture4.position = new BABYLON.Vector3(-62, 7.5, 21.5);
+
+            // picture5_2.position = new BABYLON.Vector3(7, 7.5, -34.5);
+            picture5.position = new BABYLON.Vector3(7, 7.5, -37);
+
+            picture6.position = new BABYLON.Vector3(23, 7.5, 10);
+            picture7.position = new BABYLON.Vector3(23, 7.5 ,-7.5);
+            picture8.position = new BABYLON.Vector3(23, 7.5, -25);
+
+            picture9.position = new BABYLON.Vector3(23, 7.5, -48);
+            picture10.position = new BABYLON.Vector3(23, 7.5 ,-67.5);
+            picture11.position = new BABYLON.Vector3(23, 7.5, -87);
+
+            picture12.position = new BABYLON.Vector3(10, 7.5, -97.5);
+            picture13.position = new BABYLON.Vector3(-14, 7.5, -97.5);
+            picture14.position = new BABYLON.Vector3(-38, 7.5, -97.5);
+            picture15.position = new BABYLON.Vector3(-62, 7.5, -97.5);
+            // picture16.position = new BABYLON.Vector3(-62, 7.5, -97.5);
+
+            ground.rotation.z = Math.PI/2;
+            ground.rotation.x = Math.PI/2;
+            ground.rotation.y = Math.PI/2;
+            ceiling.rotation.z = Math.PI/-2;
+            ceiling.rotation.x = Math.PI/2;
+            ceiling.rotation.y = Math.PI/-2;
+            picture6.rotation.x = Math.PI/-2;
+            picture7.rotation.x = Math.PI/-2;
+            picture8.rotation.y = Math.PI/2;
+            picture9.rotation.x = Math.PI/-2;
+  
+
+
+
+            //Textures
+            // var ceilingMaterial = new BABYLON.StandardMaterial("ceilingMaterial", scene);
+            //     ceilingMaterial.ambientTexture = new BABYLON.Texture("./assets/images/ss.png", scene);
+            var floorMaterial = new BABYLON.StandardMaterial("floorMaterial", scene);
+                floorMaterial.ambientTexture = new BABYLON.Texture("./assets/images/23.png", scene);
+            var boxMaterial = new BABYLON.StandardMaterial("boxMaterial", scene);
+                boxMaterial.ambientTexture = new BABYLON.Texture("./assets/images/112.jpg", scene);
+            var cubeMaterial = new BABYLON.StandardMaterial("cubeMaterial", scene);
+                cubeMaterial.ambientTexture = new BABYLON.Texture("./assets/images/20.jpg", scene);
+            var pictureimg = new BABYLON.StandardMaterial("pictureimg", scene);
+                pictureimg.ambientTexture = new BABYLON.Texture("./assets/images/logov2.4.png")
+            var picture2img = new BABYLON.StandardMaterial("picture2img", scene);
+                picture2img.ambientTexture = new BABYLON.Texture("./assets/images/ss11.png");
+            var picture3img = new BABYLON.StandardMaterial("picture3img", scene);
+                picture3img.ambientTexture = new BABYLON.Texture("./assets/images/125.png");
+            var picture4img = new BABYLON.StandardMaterial("picture4img", scene);
+                picture4img.ambientTexture = new BABYLON.Texture("./assets/images/107.png");
+            var picture5img = new BABYLON.StandardMaterial("picture5img", scene);
+                picture5img.ambientTexture = new BABYLON.Texture("./assets/images/6.jpg");
+            // var picture5_2img = new BABYLON.StandardMaterial("picture5_2img", scene);
+            // picture5_2img.ambientTexture = new BABYLON.Texture("./assets/images/city3.jpg");
+            var picture6img = new BABYLON.StandardMaterial("picture6img", scene);
+                picture6img.ambientTexture = new BABYLON.Texture("./assets/images/p1.png");
+            var picture7img = new BABYLON.StandardMaterial("picture7img", scene);
+                picture7img.ambientTexture = new BABYLON.Texture("./assets/images/city3.jpg");
+            var picture8img = new BABYLON.StandardMaterial("picture8img", scene);
+                picture8img.ambientTexture = new BABYLON.Texture("./assets/images/78.png");
+            var picture9img = new BABYLON.StandardMaterial("picture9img", scene);
+                picture9img.ambientTexture = new BABYLON.Texture("./assets/images/131.png");
+            var picture10img = new BABYLON.StandardMaterial("picture10img", scene);
+                picture10img.ambientTexture = new BABYLON.Texture("./assets/images/124.png");
+            var picture11img = new BABYLON.StandardMaterial("picture11img", scene);
+                picture11img.ambientTexture = new BABYLON.Texture("./assets/images/123.png");
+            var picture12img = new BABYLON.StandardMaterial("picture12img", scene);
+                picture12img.ambientTexture = new BABYLON.Texture("./assets/images/127.png");
+            var picture13img = new BABYLON.StandardMaterial("picture13img", scene);
+                picture13img.ambientTexture = new BABYLON.Texture("./assets/images/119.png");
+            var picture14img = new BABYLON.StandardMaterial("picture14img", scene);
+                picture14img.ambientTexture = new BABYLON.Texture("./assets/images/118.png");
+            var picture15img = new BABYLON.StandardMaterial("picture15img", scene);
+                picture15img.ambientTexture = new BABYLON.Texture("./assets/images/126.png");
+            
+            //rendering the textures to the object
+            ground.material = floorMaterial;
+            // ceiling.material = ceilingMaterial;
+            box.material = boxMaterial;
+            box2.material = boxMaterial;
+            box3.material = boxMaterial;
+            box4.material = boxMaterial;
+            box5.material = boxMaterial;
+            box6.material = boxMaterial;
+            box7.material = boxMaterial;
+            galleryCube.material = cubeMaterial;
+            galleryCube2.material = cubeMaterial;
+            galleryCube3.material = cubeMaterial;
+            galleryCube4.material = cubeMaterial;
+            picture.material = pictureimg;
+            picture2.material = picture2img;
+            picture3.material = picture3img;
+            picture4.material = picture4img;
+            picture5.material = picture5img;
+            // picture5_2.material = picture5_2img;
+            picture6.material = picture6img;
+            picture7.material = picture7img;
+            picture8.material = picture8img;
+            picture9.material = picture9img;
+            picture10.material = picture10img;
+            picture11.material = picture11img;
+            picture12.material = picture12img;
+            picture13.material = picture13img;
+            picture14.material = picture14img;
+            picture15.material = picture15img;
+            
+
+            //collisions
+            scene.gravity = new BABYLON.Vector3(0, -9.81, 0);
+            camera.applyGravity = true;
+            camera.ellipsoid = new BABYLON.Vector3(2, 4, 2);
+            scene.collisionsEnabled = true;
+            camera.checkCollisions = true;
+
+            ground.checkCollisions = true;
+            ceiling.checkCollisions = true;
+            box.checkCollisions = true;
+            box2.checkCollisions = true;
+            box3.checkCollisions = true;
+            box4.checkCollisions = true;
+            box5.checkCollisions = true;
+            box6.checkCollisions = true;
+            box7.checkCollisions = true;
+            galleryCube.checkCollisions = true;
+            galleryCube2.checkCollisions = true;
+
+
+
+            return scene;
+        };
+        /******* End of the create scene function ******/    
+        var scene = createScene(); //Call the createScene function
+        // var assetsManager = new BABYLON.AssetsManager(scene);
+        // var meshTask = assetsManager.addMeshTask("bench task", "", "./assets/models/", "bench.babylon");
+        // meshTask.onSuccess = function (task) {
+        // task.loadedMeshes[0].position = BABYLON.Vector3.Zero();
+        // }
+        // meshTask.onError = function (task, message, exception) {
+        // console.log(message, exception);
+        // }
+        // assetsManager.load();
+
+
+        // Register a render loop to repeatedly render the scene
+        engine.runRenderLoop(function () { 
+                scene.render();
+        });
+
+        // Watch for browser/canvas resize events
+        window.addEventListener("resize", function () { 
+                engine.resize();
+        });
+    </script>
+
+   </body>
+
+</html>
