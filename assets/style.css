@@ -123,12 +123,9 @@ li a:hover {
   margin  : 0;
   padding : 0;
 }
-.text1{font-size: 52px;
-  text-align: left;
-  float: left;
-  font-family: 'Crash'; }
+
   .view{
-  margin-top: 1px;
+  margin-top: 10px;
   margin-left: 5%;
   font-size: 12px;
   font-family: 'Ionic Charge';
