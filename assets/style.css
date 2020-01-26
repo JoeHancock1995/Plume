@@ -125,9 +125,11 @@ li a:hover {
 }
 
   .view{
-  margin-top: 10px;
-  margin-left: 5%;
-  font-size: 12px;
+  margin-top: 10%;
+  width: 8%;
+  float: left;
+  margin-left: 1%;
+  font-size: 14px;
   font-family: 'Ionic Charge';
   color: white;
   }
