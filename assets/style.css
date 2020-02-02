@@ -1,7 +1,7 @@
 #cover {
   position: fixed;
   height: 100%;
-  width: 99%; 
+  width: 100%; 
   top:0;
   left: 0;
   background: #000;
@@ -10,8 +10,8 @@
 
 #cover-image {
  position: absolute;
- top: 48%;
- left: 48%;
+ top: 47.5%;
+ left: 47.5%;
  z-index: 100;
  height: 50px;
  width: 50px;

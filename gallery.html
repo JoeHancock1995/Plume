@@ -11,6 +11,7 @@
         <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
 
         <script src="https://cdn.babylonjs.com/babylon.max.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
         <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
         <script src="https://cdn.babylonjs.com/babylon.js"></script>
@@ -19,6 +20,9 @@
     </head>
 
    <body class="gallery">
+    <div id="cover">
+        <img id="cover-image" src="./assets/loading.gif" alt="Loading...">
+     </div>
     <div class=header>
         <div class="name-box">
         <div id="name">PLUME</div>
@@ -48,8 +52,16 @@
           </div>
         </footer>
       </div>
-
       <script>
+                  $(window).on('load', function() {
+        $("#cover").hide();
+        function newW()
+  {
+      $(window).ready();
+  }
+      setTimeout(newW, 3000);
+      });
+
           var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
           var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
   
