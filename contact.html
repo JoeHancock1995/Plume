@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PLUME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+  <!-- <script src="assets/js/app.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="./assets/js/vendors/anime-master/lib/anime.min.js"></script> -->
+</head>
+<body>
+    <div id="cover">
+       <img id="cover-image" src="./assets/loading.gif" alt="Loading...">
+    </div>
+    <div class=header>
+        <div class="name-box">
+            <div id="name">PLUME</div>
+            <div id="title">Web Development & Digital Art</div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="https://joehancock1995.github.io/Portfolio/index.html">Other Projects</a></li>
+                <li><a href="gallery.html">View Version 2 (Beta)</a></li>
+                <li><a href="index.html">View Version 1</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+
+    <div class="footer">
+        <footer>
+          <div class="vectors">
+            <div id="github">
+              <a class="active" href="https://joehancock1995.github.io/Portfolio/index.html"><img src="./assets/images/vectors/github-10-48.png" style="width: 50%"></a>
+            </div>
+          </div>
+          <div class="footerbox">
+            <div class="footertext"> Copyright © 2019 <a href="plumesounding.com">PLUME</a>All Rights Reserved</div>
+          </div>
+        </footer>
+    </div>
+  <script>
+      $(window).on('load', function() {
+      $("#cover").hide();
+      function newW()
+{
+    $(window).ready();
+}
+    setTimeout(newW, 3000);
+    });
+</script>
+</body>
+</html>
