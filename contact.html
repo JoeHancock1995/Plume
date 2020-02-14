@@ -31,47 +31,12 @@
         </div>
     </div>
 <h1> Contact Me </h1>
-    <form name="htmlform" method="post" action="html_form_send.php">
-        <table width="300px"></tr>
-            <tr>
-                <td valign="center">
-                    <label for="first_name">First Name: </label>
-                </td>
-                <td valign="center">
-                    <input  type="text" name="first_name" maxlength="50" size="30">
-                </td>
-            </tr>
-            <tr>
-                <td valign="center"">
-                    <label for="last_name">Last Name: </label>
-                </td>
-                <td valign="center">
-                    <input  type="text" name="last_name" maxlength="50" size="50">
-                </td>
-            </tr>
-            <tr>
-                <td valign="center">
-                    <label for="email">Email Address: </label>
-                </td>
-                <td valign="center">
-                    <input  type="text" name="email" maxlength="80" size="50">
-                </td>
-            </tr>
-            <tr>
-                <td valign="center">
-                    <label for="comments">Comments:</label>
-                </td>
-                <td valign="center">
-                    <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align:center">
-                    <input type="submit" value="Submit">
-                </td>
-            </tr>
-        </table>
-    </form>
+
+<form action="welcome_get.php" method="get">
+    Name: <input type="text" name="name"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="submit">
+</form>
 
     <div class="footer">
         <footer>
