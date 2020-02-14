@@ -139,7 +139,7 @@ li a:hover {
       width: 70%;
       height: 70%;
       touch-action: none;
-      border: 20px double white;
+      border: 10px solid white;
   }
 /* remove until authentication can be made*/
 
@@ -168,24 +168,6 @@ li a:hover {
 canvas{
   float: left;
 }
-form{
-  margin-left: 35%;
-  font-size: 20px;
-  font-family: 'Conman Regular';
-  width: 80%;
-}
-input{
-  height: 30px;
-  margin-top: 40px;
-  margin-left: 20px;
-  text-align: center;
-  position: static;
-}
-input {
-  background-color: white;
-  width: 350px;
-  color: black;
-}
 
 h1{
   margin-top: 50px;
@@ -194,4 +176,10 @@ h1{
   font-family:"Ye Old Shire Outline";
   letter-spacing: 3px;
   font-size: 42px;
+}
+
+#contact{
+font-size: 22px;
+text-align: center;
+font-family: "Conman Regular";
 }
